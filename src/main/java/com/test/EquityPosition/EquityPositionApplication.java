@@ -12,4 +12,6 @@ public class EquityPositionApplication {
 		SpringApplication.run(EquityPositionApplication.class, args);
 	}
 
+	
+	 
 }

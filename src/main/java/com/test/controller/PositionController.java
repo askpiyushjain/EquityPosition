@@ -36,4 +36,9 @@ public class PositionController {
 		return ResponseEntity.ok(positionList);
 	}
 
+	@GetMapping("/byCodes")
+	public ResponseEntity<List<PositionEntity>> getPositionByCode(){
+		List<PositionEntity> positionList = positionService.getPosition();
+		return ResponseEntity.ok(positionList);
+	}
 }

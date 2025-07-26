@@ -12,7 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Apply to all endpoints
                 .allowedOrigins("http://localhost:4200") // Allow your Angular app
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow necessary methods
+                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS") // Allow necessary methods
                 .allowedHeaders("*"); // Allow all headers
     }
 }
