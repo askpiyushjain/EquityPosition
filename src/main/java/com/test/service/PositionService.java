@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.test.entity.PositionEntity;
 
-
 public interface PositionService {
 
 	PositionEntity savePosition(PositionEntity userEntity);

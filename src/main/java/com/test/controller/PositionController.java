@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,8 @@ import com.test.service.PositionService;
 
 
 @RestController
-@RequestMapping("/v1/positions")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/positions")
 public class PositionController {
 
 	@Autowired
@@ -36,7 +38,8 @@ public class PositionController {
 		return ResponseEntity.ok(positionList);
 	}
 
-	@GetMapping("/byCodes")
+	@GetMapping("/bycodes")
+	@CrossOrigin(origins = {"http://localhost:4200"})
 	public ResponseEntity<List<PositionEntity>> getPositionByCode(){
 		List<PositionEntity> positionList = positionService.getPosition();
 		return ResponseEntity.ok(positionList);
