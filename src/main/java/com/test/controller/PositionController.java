@@ -20,7 +20,7 @@ import com.test.service.PositionService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/positions")
+@RequestMapping("/v1/positions")
 public class PositionController {
 
 	@Autowired
